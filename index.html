@@ -25,7 +25,7 @@
                 <div class="chat-wrapper">
 
                     <div class="heading">
-                        PRDP CHATBOT
+                        <p class="mb-0"> <i class="fa-solid fa-headset me-1"></i> PRDP CHATBOT</p>
                     </div>
                     <div class="d-none w-100 my-4 d-flex flex-column justify-content-center">
                         <img src="./assets/img/prdp_rz.png" alt="" class="mx-auto mt-3" style="max-width: 90px;">
@@ -302,7 +302,7 @@
             var last_msg_item = chat_msg.children().last();
             
             if(current_answer_type === 'list'){
-                last_msg_item.append('<li></li>');
+                last_msg_item.append('<li class="mb-2"></li>');
                 last_msg_item = last_msg_item.children().last();
             }
 

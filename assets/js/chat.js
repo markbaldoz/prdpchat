@@ -1,5 +1,6 @@
 var questions = [
     {
+        topic : 'About PRDP',
         question : [
             'what is prdp',
             'prdp'
@@ -40,6 +41,7 @@ var questions = [
         type : 'html'
     },
     {
+        topic : 'About PRDP Scale Up',
         question: [
                     'what is prdp scale up',
                     'prdp scale up',
@@ -56,11 +58,13 @@ var questions = [
                  'market.']
     },
     {
+        topic : 'About PRDP Scale Up objective',
         question: [
                 'What is the aim of the PRDP Scale Up',
                 'what is the objective of prdp scale up',
                 'objective of prdp scale up',
                 'prdp scale up objective',
+                'scale up objective',
                 'objective'
             ],
         answer: ['The PRDP Scale-Up aims to contribute '+
@@ -70,14 +74,16 @@ var questions = [
                  'fishery value chains.']
     },
     {
+        topic : 'About PRDP Scale Up implementation coverage',
         question: [
-                'Where will the PRDP Scale Up be implemented?',
+                'Where will the PRDP Scale Up be implemented',
                 'prdp scale up coverage',
                 'coverage'
             ],
         answer: ['The PRDP Scale-Up covers all 16 regions composed of 82 provinces in the country.']
     }, 
     {
+        topic : 'About PRDP Scale Up difference from OL, AF1, AF2',
         question: [
                     'How does the PRDP Scale Up differ from the PRDP Original Loan, AF1, and AF2',
                     'difference of prdp scale up to OL, AF1 and AF2',
@@ -122,6 +128,7 @@ var questions = [
                 ]
     },
     {
+        topic : 'About PRDP Scale up beneficiaries',
         question : [
                 'Who are the beneficiaries of the PRDP Scale Up',
                 'PRDP scale up beneficiaries',
@@ -145,6 +152,7 @@ var questions = [
                   'enterprise investments.']
     },
     {
+        topic : 'About PRDP Scale up partners',
         question : [
                 'Who are the partners in implementing the PRDP Scale Up',
                 'partners'
@@ -174,6 +182,7 @@ var questions = [
                   'PDS-PPP, among others.']
     },
     {
+        topic : 'About PRDP scale up implementation date',
         question: [
                 'when will the prdp scale up be implemented',
                 'prdp scale up implementation date'
@@ -181,6 +190,7 @@ var questions = [
         answer: ['The PRDP Scale-Up is targeted to be implemented for six years from 2023 to 2029.']
     },
     {
+        topic : 'About PRDP FCA and FCA clusters',
         question : ['Who are the FCAs and FCA clusters'],
         answer : [
                 'FCA (Farmers Fisherfolk Cooperatives and Associations)',
@@ -209,6 +219,7 @@ var questions = [
         ]
     },
     {
+        topic : 'About I-PLAN Key Features',
         question : [
                     'What are the key features of the I-PLAN Component',
                     'I-PLAN key features',
@@ -238,6 +249,7 @@ var questions = [
             ]
     },
     {
+        topic : 'About PCIP',
         question : [
                 'What is the Provincial Commodity Investment Plan (PCIP)',
                 'what is Provincial Commodity Investment Plan',
@@ -262,6 +274,7 @@ var questions = [
         ]
     },
     {
+        topic : 'About Regional Agri-Fishery Investment Portfolio',
         question : [
                     'What is the Regional Agri-Fishery Investment Portfolio',
                     'regional agri-fishery investment porfolio',
@@ -285,6 +298,7 @@ var questions = [
         ]
     },
     {
+        topic : 'About I-BUILD key features',
         question : [
                     'What are the key features of the I-BUILD Component?',
                     'I-BUILD key features',
@@ -309,6 +323,7 @@ var questions = [
             ]
     },
     {
+        topic : 'About I-REAP key features',
         question : [
                     'What are the key features of the I-REAP Component',
                     'what are the key features of I-REAP component',
@@ -334,6 +349,7 @@ var questions = [
         ]
     },
     {
+        topic : 'About I-SUPPORT key features',
         question : [
                     'What are the key features of the I-SUPPORT Component',
                     'I-SUPPORT key features',
@@ -354,6 +370,7 @@ var questions = [
         ]
     },
     {
+        topic : 'About Scale Up budget',
         question : [
                     'How much is the budget for the PRDP Scale Up',
                     'How much is the budget for PRDP Scale Up',
@@ -374,6 +391,7 @@ var questions = [
         ]
     },
     {
+        topic : 'About PRDP Scale up implementation structure',
         question : [
                     'What is the PRDP Scale Up implementation structure',
                     'PRDP Scale Up implementation structure',
@@ -402,6 +420,7 @@ var questions = [
         ]
     },
     {
+        topic : 'About difference of PRDP Scale Up to Original PRDP',
         question : [
                     'How is the PRDP Scale Up different from the Original PRDP',
                     'What is the difference between PRDP Scale Up and Original PRDP',
@@ -435,6 +454,7 @@ var questions = [
         ]
     },
     {
+        topic : 'How private sector participate in PRDP Scale Up',
         question : [
                     'How can the private sector participate in the PRDP Scale up',
         ],
@@ -460,6 +480,7 @@ var questions = [
         ]
     },
     {
+        topic : 'About PRDP subproject types',
         question : [
                     'What are the sub-project proposals eligible for I-BUILD and I-REAP Components funding',
                     'what are the prdp project types',
@@ -560,6 +581,7 @@ var questions = [
         type : 'html'
     },
     {
+        topic : 'About PRDP major components',
         question : [
                 'What are the components of the PRDP Scale Up',
                 'what are the prdp scale up components',
