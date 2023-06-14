@@ -98,7 +98,8 @@ var questions = [
                   'enterprise investments.']
     },
     {
-        question : ['Who are the partners in implementing the PRDP Scale Up'],
+        question : [
+            'Who are the partners in implementing the PRDP Scale Up'],
         answer : ['The project will partner with the private '+
                   'sector for enterprise development. These '+
                   'are private business entities that are willing '+
@@ -154,5 +155,33 @@ var questions = [
                 'processes and/or common final '+
                 'products.'
         ]
+    },
+    {
+        question : [
+                    'What are the key features of the I-PLAN Component',
+                    'I-PLAN key features',
+                    'I-PLAN key feature'
+                ],
+        answer: [
+                'The I-PLAN Component will lay down the ' +
+                'strategic framework in the context of overall ' +
+                'project operation and implementation of ' +
+                'project interventions. The component will ' +
+                'strengthen the framework and linkages for the ' +
+                'delivery of devolved but integrated agriculture ' +
+                'and fishery services by the national and local ' +
+                'government units. Operationally, I-PLAN will ' +
+                'facilitate a planning process with a regional ' +
+                'perspective, taking a spin on the Provincial ' +
+                'Commodity Investment Plans and integrating ' +
+                'the DA’s Farm and Fisheries Clustering and ' +
+                'Consolidation (F2C2) Cluster Development ' +
+                'Plans (CDPs) to develop the Regional ' +
+                'Agriculture and Fisheries Investment Portfolio ' +
+                '(RAFIP). The RAFIP will ensure the linkage from ' +
+                'a regional perspective and alignment of local ' +
+                'plans to the directions and strategies at the ' +
+                'national level.'
+            ]
     }
 ]
