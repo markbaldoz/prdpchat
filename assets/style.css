@@ -150,8 +150,12 @@ body{
     align-items: center !important;
 }
 
-.chat-container .chat-wrapper .chat-input-container .chat-input{
+.chat-container .chat-wrapper .chat-input-container .ready .chat-input{
     outline: none !important;
     box-shadow: none !important;
     border: none !important;
 }
+
+
+
+

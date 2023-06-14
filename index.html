@@ -51,11 +51,20 @@
                         
                     </div>
 
-                    <div class="chat-input-container">
-                        <input type="text" name="" id="txt-input-chat" class="chat-input form-control">
-                        <button class="btn bg-transpartent text-primary fs-5" id="btn-send">
-                            <i class="fa-regular fa-paper-plane"></i>
-                        </button>
+                    <div class="chat-input-container" id="chat-input-container">
+                        <p class="busy text-primary text-center flex-grow-1 small my-2 d-none">
+                            <i class="fa-solid fa-gear fa-spin"></i> RESPONDING QUESTION ...
+                        </p>
+                        <div class="ready flex-grow-1 d-flex flex-row flex-no-wrap">
+
+                             <input type="text" name="" id="txt-input-chat" class="chat-input form-control"
+                                placeholder="Type your question here...">
+                            <button class="btn bg-transpartent text-primary fs-5" id="btn-send">
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </button>
+
+                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -83,6 +92,7 @@
         const msg_container = $('#chat-msg-container');
         const chat_content = $('.chat-content');
         const btn_send = $('#btn-send');
+        const chat_input_container = $('#chat-input-container');
         const txt_chat = $('#txt-input-chat');
 
         $(window).ready(function(){
@@ -116,6 +126,9 @@
         
 
         async function add_message(msg, type = ''){
+
+            toggle_chat_input('busy');
+
             var chat =  '<div class="chat '+ type +'">' + 
                         '   <p class="m-0 text-start msg">'+ '' +'</p>'+
                         '</div>';
@@ -198,6 +211,7 @@
 
                             }else{
                                 chat_msg.html(msg.join('<br><br>'));
+                                toggle_chat_input('ready');
                             }
                             // 
                             
@@ -243,6 +257,18 @@
         function send_message(new_msg, type=''){
             add_message(new_msg, type);
             txt_chat.val('');
+        }
+
+        function toggle_chat_input(mode = 'ready'){
+            const ready_item = chat_input_container.find('.ready');
+            const busy_item = chat_input_container.find('.busy');
+            if(mode === 'ready'){
+                ready_item.removeClass('d-none');
+                busy_item.addClass('d-none');
+            }else{
+                busy_item.removeClass('d-none');
+                ready_item.addClass('d-none');
+            }
         }
 
 
