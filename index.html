@@ -244,7 +244,8 @@
                 clean_question = clean_question.replace(/[\-]/i, ' ');
 
             console.log(clean_question);
-            var question= questions.find(a => a.question.toLowerCase() === clean_question.toLowerCase());
+            // var question= questions.find(a => a.question.toLowerCase() === clean_question.toLowerCase());
+            var question= find_answer(clean_question);
             if(question !== undefined){
                 send_message(question.answer, 'response');
             }else{
@@ -269,6 +270,20 @@
                 busy_item.removeClass('d-none');
                 ready_item.addClass('d-none');
             }
+        }
+
+        function find_answer(msg){
+            var question;
+            for(var i = 0; i < questions.length; i++){
+                var item = questions[i];
+                var match = item.question.find(q => q.toLowerCase() === msg);
+                if(match !== undefined){
+                    question = item;
+                    break;
+                }
+                
+            }
+            return question;
         }
 
 

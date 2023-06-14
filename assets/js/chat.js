@@ -1,6 +1,10 @@
 var questions = [
     {
-        question: 'what is prdp scale up',
+        question: [
+                    'what is prdp scale up',
+                    'prdp scale up',
+                    'scale up'
+                ],
         answer: ['The Philippine Rural Development Project '+
                  '(PRDP) Scale-Up is one of the flagship '+
                  'programs of the Department of Agriculture '+
@@ -12,7 +16,12 @@ var questions = [
                  'market.']
     },
     {
-        question: 'What is the aim of the PRDP Scale Up',
+        question: [
+                'What is the aim of the PRDP Scale Up',
+                'what is the objective of prdp scale up',
+                'objective of prdp scale up',
+                'prdp scale up objective'
+            ],
         answer: ['The PRDP Scale-Up aims to contribute '+
                  'to developing the sector by improving '+
                  'farmers’ and fisherfolk’s access to markets '+
@@ -20,11 +29,20 @@ var questions = [
                  'fishery value chains.']
     },
     {
-        question: 'Where will the PRDP Scale Up be implemented?',
+        question: [
+                'Where will the PRDP Scale Up be implemented?',
+                
+            ],
         answer: ['The PRDP Scale-Up covers all 16 regions composed of 82 provinces in the country.']
     }, 
     {
-        question: 'How does the PRDP Scale Up differ from the PRDP Original Loan, AF1, and AF2',
+        question: [
+                    'How does the PRDP Scale Up differ from the PRDP Original Loan, AF1, and AF2',
+                    'difference of prdp scale up to OL, AF1 and AF2',
+                    'difference of prdp scale up to OL',
+                    'difference of prdp scale up to AF1',
+                    'difference of prdp scale up to AF2',
+                ],
         answer : [
                  'The Philippine Rural Development Project '+
                  'has evolved over the years, responding to '+
@@ -58,7 +76,10 @@ var questions = [
                 ]
     },
     {
-        question : 'Who are the beneficiaries of the PRDP Scale Up',
+        question : [
+                'Who are the beneficiaries of the PRDP Scale Up',
+                'PRDP scale up beneficiaries'
+            ],
         answer : ['Actors within the commodity value '+
                   'chains such as smallholder farmers '+
                   'and fisher groups, farmers and fishers’ '+
@@ -77,7 +98,7 @@ var questions = [
                   'enterprise investments.']
     },
     {
-        question : 'Who are the partners in implementing the PRDP Scale Up',
+        question : ['Who are the partners in implementing the PRDP Scale Up'],
         answer : ['The project will partner with the private '+
                   'sector for enterprise development. These '+
                   'are private business entities that are willing '+
@@ -103,11 +124,11 @@ var questions = [
                   'PDS-PPP, among others.']
     },
     {
-        question: 'when will the prdp scale up be implemented',
+        question: ['when will the prdp scale up be implemented'],
         answer: ['The PRDP Scale-Up is targeted to be implemented for six years from 2023 to 2029.']
     },
     {
-        question : 'Who are the FCAs and FCA clusters',
+        question : ['Who are the FCAs and FCA clusters'],
         answer : [
                 'FCA (Farmers Fisherfolk Cooperatives and Associations)',
 
