@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PRDP Chat</title>
+
+    <link rel="icon" type="image/x-icon" href="./assets/img/prdp_rz.png">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="./assets/js/jquery-3.7.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+            rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+            crossorigin="anonymous">
+
+    
+</head>
+<body>
+    <div class="wrapper position-absolute w-100 h-100 d-inline-block">
+        <div class="container">
+            <h3 class="m-0 mt-4 text-center">PRDP CHAT</h3>
+            <div class="chat-container">
+                <div class="chat-wrapper">
+                    <div class="chat-msg-container" id="chat-msg-container">
+                        <div class="chat-content">
+
+
+                            <div class="w-100 my-4 d-flex flex-column justify-content-center">
+                                <img src="./assets/img/prdp_rz.png" alt="" class="mx-auto mt-3" style="max-width: 90px;">
+                                <div class="text-muted text-center mt-1" style="font-size: 12px;">PRDP CHATBOT</div>
+                            </div>
+
+                            <div class="chat response mt-5">
+                                <div class="msg">Welcome to PRDP AI Chatbot</div>
+                            </div>
+
+                            <div class="chat d-none">
+                                <div class="msg">The quick brown fox jumps over the lazy dog</div>
+                            </div>
+                            
+                    
+
+                            <div class="chat response d-none">
+                                <div class="msg">The quick brown fox jumps over the lazy dog</div>
+                            </div>
+
+                            <div class="w-100 d-none" style="height: 300px; background: red;"></div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="chat-input-container">
+                        <input type="text" name="" id="txt-input-chat" class="chat-input form-control">
+                        <button class="btn bg-transpartent text-primary fs-5" id="btn-send">
+                            <i class="fa-regular fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="floating-container position-absolute bottom-0 end-0 p-3">
+            <div class="floating-control bg-primary text-white border-0 position-relative fs-5">
+                <i class="fa-regular fa-message position-absolute top-50 start-50 translate-middle "></i>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
+        crossorigin="anonymous"></script>
+
+    <script src="./assets/js/chat.js"></script>
+
+
+    <script>
+
+        const msg_container = $('#chat-msg-container');
+        const chat_content = $('.chat-content');
+        const btn_send = $('#btn-send');
+        const txt_chat = $('#txt-input-chat');
+
+        $(window).ready(function(){
+            init_controls();
+        });
+
+        function init_controls(){
+            $(document).on('click', '#btn-send', function(){
+                var new_msg = txt_chat.val().trim();
+                if(new_msg === '') return;
+
+                prepare_message(new_msg);
+            });
+
+            $(document).on('keyup', '#txt-input-chat', function(e){
+                
+                if(e.keyCode === 13){
+                    var new_msg = txt_chat.val().trim();
+                    if(new_msg === '') return;
+
+
+                    
+
+                    prepare_message(new_msg);
+
+                }
+            })
+        }
+
+        
+        
+
+        async function add_message(msg, type = ''){
+            var chat =  '<div class="chat '+ type +'">' + 
+                        '   <p class="m-0 text-start msg">'+ '' +'</p>'+
+                        '</div>';
+
+            chat_content.append(chat);
+
+            var last_chat = chat_content.find('.chat').last();
+            if(last_chat.length <= 0) return;
+
+            var chat_msg = last_chat.find('.msg');
+
+            if(type === ''){
+                chat_msg.text(msg);
+                return;
+            }
+
+            var index = 0;
+            var line_number = 0;
+
+            var lines = msg;
+            var words = lines[line_number].split(' ');
+
+            animate_text(words, false);
+
+            // for(var i = 0; i < lines.length; i++){
+
+            //     index = 0; // result word index
+                
+
+            //     console.log('writing line: ' + (i + 1));
+            //     var isLastLine = (i == lines.length - 1);
+            //     await animate_text(words, isLastLine);
+
+                
+            // }
+            // end of lines loop
+
+            
+            
+            var current_scoll_height = chat_content.prop('scrollHeight');
+            
+            function animate_text(words, isLastLine = false){
+                setTimeout(function(){
+                    var word = words[index];
+
+                    var span_item = document.createElement('span');
+                        span_item.innerHTML = word + (word < words.length - 2 ? ' ' : ' ');
+
+                    chat_msg.append(span_item);
+
+
+                    var latest_scroll_height = chat_content.prop('scrollHeight')
+                    if(current_scoll_height != latest_scroll_height){
+                        scroll_message();
+                        current_scoll_height = latest_scroll_height;
+                    } 
+                    
+
+                    if(index + 1 < words.length){
+                        index++;
+                        animate_text(words, isLastLine);
+                    }else{
+                    
+                            if(line_number < lines.length - 1){
+                                chat_msg.append('<br><br>');
+                            }
+
+                            // increment line number
+                            line_number++;
+
+                            // check if current data is not yet the last line
+                            
+
+                            // renew data values to be printed
+                            if(line_number < lines.length){
+                                words = lines[line_number].split(' ');
+                                index = 0;
+
+                                animate_text(words, false);
+
+                            }else{
+                                chat_msg.html(msg.join('<br><br>'));
+                            }
+                            // 
+                            
+                        // }
+                    }
+                }, 100);
+            }
+
+            // await animate_text();
+            
+            // append new chat
+            // msg_container.append(chat);
+            
+
+            
+
+        }
+
+        function scroll_message(){
+            chat_content.animate( {
+                scrollTop : chat_content.prop('scrollHeight')
+            });
+        }
+
+        function prepare_message(new_msg){
+            send_message(new_msg);
+
+            // answer question
+            var clean_question = new_msg.replace(/[\?]/i, '');
+                clean_question = clean_question.replace(/[\-]/i, ' ');
+
+            console.log(clean_question);
+            var question= questions.find(a => a.question.toLowerCase() === clean_question.toLowerCase());
+            if(question !== undefined){
+                send_message(question.answer, 'response');
+            }else{
+                send_message(['Sorry. The data that you are asking is not yet available in the system. '+
+                    ''], 'response');
+            }
+
+        }
+
+        function send_message(new_msg, type=''){
+            add_message(new_msg, type);
+            txt_chat.val('');
+        }
+
+
+    </script>
+</body>
+</html>
