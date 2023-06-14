@@ -32,7 +32,8 @@ var questions = [
     {
         question: [
                 'Where will the PRDP Scale Up be implemented?',
-                'prdp scale up coverage'
+                'prdp scale up coverage',
+                'coverage'
             ],
         answer: ['The PRDP Scale-Up covers all 16 regions composed of 82 provinces in the country.']
     }, 
@@ -83,7 +84,8 @@ var questions = [
     {
         question : [
                 'Who are the beneficiaries of the PRDP Scale Up',
-                'PRDP scale up beneficiaries'
+                'PRDP scale up beneficiaries',
+                'beneficiaries'
             ],
         answer : ['Actors within the commodity value '+
                   'chains such as smallholder farmers '+
@@ -104,7 +106,9 @@ var questions = [
     },
     {
         question : [
-            'Who are the partners in implementing the PRDP Scale Up'],
+                'Who are the partners in implementing the PRDP Scale Up',
+                'partners'
+        ],
         answer : ['The project will partner with the private '+
                   'sector for enterprise development. These '+
                   'are private business entities that are willing '+
@@ -130,7 +134,10 @@ var questions = [
                   'PDS-PPP, among others.']
     },
     {
-        question: ['when will the prdp scale up be implemented'],
+        question: [
+                'when will the prdp scale up be implemented',
+                'prdp scale up implementation date'
+            ],
         answer: ['The PRDP Scale-Up is targeted to be implemented for six years from 2023 to 2029.']
     },
     {
@@ -516,7 +523,8 @@ var questions = [
                 'what are prdp scale up components',
                 'prdp scale up components',
                 'what are the prdp components',
-                'prdp components'
+                'prdp components',
+                'components'
         ],
         answer : [
             {
