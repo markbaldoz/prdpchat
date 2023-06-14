@@ -20,7 +20,8 @@ var questions = [
                 'What is the aim of the PRDP Scale Up',
                 'what is the objective of prdp scale up',
                 'objective of prdp scale up',
-                'prdp scale up objective'
+                'prdp scale up objective',
+                'objective'
             ],
         answer: ['The PRDP Scale-Up aims to contribute '+
                  'to developing the sector by improving '+
