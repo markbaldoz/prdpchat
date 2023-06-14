@@ -241,7 +241,7 @@
 
             // answer question
             var clean_question = new_msg.replace(/[\?]/i, '');
-                clean_question = clean_question.replace(/[\-]/i, ' ');
+                clean_question = clean_question.toLowerCase().replace('scale-up', 'scale up');
 
             console.log(clean_question);
             // var question= questions.find(a => a.question.toLowerCase() === clean_question.toLowerCase());

@@ -42,6 +42,10 @@ var questions = [
                     'difference of prdp scale up to OL',
                     'difference of prdp scale up to AF1',
                     'difference of prdp scale up to AF2',
+                    'what is the difference between prdp scale up and OL, AF1 and AF2',
+                    'what is the difference between prdp scale up and OL',
+                    'what is the difference between prdp scale up and AF1',
+                    'what is the difference between prdp scale up and AF2'
                 ],
         answer : [
                  'The Philippine Rural Development Project '+
@@ -160,7 +164,8 @@ var questions = [
         question : [
                     'What are the key features of the I-PLAN Component',
                     'I-PLAN key features',
-                    'I-PLAN key feature'
+                    'I-PLAN key feature',
+                    'I-PLAN'
                 ],
         answer: [
                 'The I-PLAN Component will lay down the ' +
@@ -183,5 +188,228 @@ var questions = [
                 'plans to the directions and strategies at the ' +
                 'national level.'
             ]
+    },
+    {
+        question : [
+                'What is the Provincial Commodity Investment Plan (PCIP)',
+                'what is Provincial Commodity Investment Plan',
+                'what is PCIP',
+                'PCIP'
+            ],
+        answer : [
+                'The Provincial Commodity Investment Plan '+
+                'or PCIP is a three-year rolling plan introduced '+
+                'by DA-PRDP for effective, technically-based '+
+                'planning and for leveraging resources for '+
+                'investments from government agencies '+
+                'as well as the private sector. By using the '+
+                'PCIP, LGUs are able to identify specific rural '+
+                'infrastructure or enterprise interventions to '+
+                'address constraints in the value chains of the '+
+                'priority commodities in their provinces. The '+
+                'PCIP, together with the Cluster Development '+
+                'Plans (CDPs), will define the Regional Agri- '+
+                'Fishery Investment Portfolio and will become '+
+                'the basis for all project interventions.'
+        ]
+    },
+    {
+        question : [
+                    'What is the Regional Agri-Fishery Investment Portfolio',
+                    'regional agri-fishery investment porfolio',
+                    'investment portfolio'
+                ],
+        answer: [
+                    'The Regional Agri-Fishery Investment '+
+                    'Portfolio (RAFIP) is the outcome document of '+
+                    'the planning process underlining a regional'+
+                    'perspective on the PCIPs and integrating '+
+                    'the Cluster Development Plans (CDPs) of the '+
+                    'clustering and consolidation strategy of the DA. '+
+                    'It contains the list of interventions potential for '+
+                    'upscaling through clustering and consolidation '+
+                    'based on regional analysis. It will serve as the '+
+                    'basis for proposals to be submitted to the '+
+                    'project for funding, as well as input to the DA '+
+                    'regional planning and budgeting process to '+
+                    'identify areas of investment for funding by the '+
+                    'DA or other funding agencies.'
+        ]
+    },
+    {
+        question : [
+                    'What are the key features of the I-BUILD Component?',
+                    'I-BUILD key features',
+                    'I-BUILD key feature',
+                    'I-BUILD'
+        ],
+        answer : [
+                    'The I-BUILD Component will focus on '+
+                    'delivering climate-resilient access and value '+
+                    'chain infrastructure support to build up food '+
+                    'distribution hubs and logistics systems. It '+
+                    'aims to provide unhampered mobility, access, '+
+                    'and a stable supply of food commodities '+
+                    'and other agri-fishery products with reduced '+
+                    'transport, handling, and hauling costs thereby '+
+                    'improving product quality and prices in target '+
+                    'markets. I-BUILD is in charge of the project’s '+
+                    'rural infrastructure development portfolio '+
+                    'and processing of submitted infrastructure '+
+                    'development proposals anchored on the '+
+                    'PCIP/RAFIP.'    
+            ]
+    },
+    {
+        question : [
+                    'What are the key features of the I-REAP Component',
+                    'what are the key features of I-REAP component',
+                    'I-REAP key features',
+                    'I-REAP key feature',
+                    'I-REAP'
+        ],
+        answer : [
+                    'The I-REAP Component aims to increase '+
+                    'productivity, value addition and improve access '+
+                    'to the market of enterprise clusters through '+
+                    'efficient cluster-based agricultural and fishery '+
+                    'productivity enhancement interventions. The '+
+                    'component aims to support small to large- '+
+                    'scale, high-impact investments and enterprise '+
+                    'development through common service '+
+                    'facilities, capacity-building, and other agri-aqua '+
+                    'support services for FCAs and FCA clusters. '+
+                    'I-REAP is in charge of the project’s enterprise '+
+                    'development portfolio and processing of '+
+                    'submitted rural enterprise development '+
+                    'proposals anchored on the PCIP/RAFIP.'
+        ]
+    },
+    {
+        question : [
+                    'What are the key features of the I-SUPPORT Component',
+                    'I-SUPPORT key features',
+                    'I-SUPPORT key feature',
+                    'I-SUPPORT'
+        ],
+        answer : [
+                    'The I-SUPPORT Component provides the '+
+                    'backbone of PRDP Scale-Up implementation. '+
+                    'It will ensure coordinated approaches and '+
+                    'strategies among the three components '+
+                    'by providing support for effective and '+
+                    'efficient project management, project '+
+                    'oversight, capacity building/strengthening '+
+                    'complementary project staffing, technical '+
+                    'assistance, and operating costs for the six- '+
+                    'year implementation.'
+        ]
+    },
+    {
+        question : [
+                    'How much is the budget for the PRDP Scale Up',
+                    'How much is the budget for PRDP Scale Up',
+                    'prdp scale up budget',
+                    'prdp scale up budget allocation',
+                    'budget'
+        ],
+        answer : [
+                    'Financially, the project will be supported by a '+
+                    'USD 600 million (around PhP 33 billion) loan '+
+                    'from the World Bank with counterpart funds '+
+                    'from the national government amounting '+
+                    'to PhP5.57 billion, and LGUs and/or farmer/ '+
+                    'fisherfolk cooperatives and associations '+
+                    '(FCAs) costing PhP 6.44 billion. Notably, '+
+                    '92% of the total project cost will fund rural '+
+                    'infrastructure and enterprise investments.'
+        ]
+    },
+    {
+        question : [
+                    'What is the PRDP Scale Up implementation structure',
+                    'PRDP Scale Up implementation structure',
+                    'prdp scale up structure',
+                    'structure of prdp scale up',
+        ],
+        answer: [
+                    'The PRDP Scale-Up will maintain the '+
+                    'existing original PRDP implementation '+
+                    'structure. At the national level, the National '+
+                    'Project Coordination Office (NPCO), under '+
+                    'the direct supervision of the Office of the '+
+                    'Assistant Secretary for Operations, is in '+
+                    'charge of the overall project operations, '+
+                    'coordination, and external communication. '+
+                    'The four Project Support Offices (PSOs) will '+
+                    'oversee regional cluster operations and '+
+                    'support services covering Luzon, Visayas, '+
+                    'and Mindanao. At the regional level, the '+
+                    'Regional Project Coordination Offices '+
+                    '(RPCOs) lodged at the 16 DA Regional Field '+
+                    'Offices (RFOs) will provide backstopping '+
+                    'work and direct coordination with the '+
+                    'proponent LGUs and FCAs/ cluster FCAs of '+
+                    'the various subprojects.'
+        ]
+    },
+    {
+        question : [
+                    'How is the PRDP Scale Up different from the Original PRDP',
+                    'What is the difference between PRDP Scale Up and Original PRDP',
+                    'PRDP Scale Up and Original PRDP',
+                    'What is the difference between Original PRDP and PRDP Scale Up',
+                    'PRDP Scale Up and Original PRDP',
+                    'Original PRDP and PRDP Scale Up',
+        ],
+        answer : [
+                    'Banking on the gains of the Original PRDP, '+
+                    'the PRDP Scale-Up is an expanded version '+
+                    'of the original project implemented in 2014. '+
+                    'PRDP Scale-Up will roll out a new basis '+
+                    'for investment through a regional and '+
+                    'interprovincial perspective in investment '+
+                    'planning, and the inclusion of rice and corn '+
+                    'as priority commodities. Also, the PRDP '+
+                    'Scale-Up will utilize a new approach to agri- '+
+                    'fisheries development to focus on clustering '+
+                    'and consolidation strategies and promote a '+
+                    'productive partnership with FCAs/cluster '+
+                    'FCAs and the private sector for value- '+
+                    'adding and increased market access, which '+
+                    'is a level-up from the proponent group- '+
+                    'specific approach. The project will also '+
+                    'highlight climate resilience as a common '+
+                    'feature across interventions. It will also '+
+                    'establish scaled-up enterprise investments '+
+                    'to include small to large-scale enterprises '+
+                    'as common service facilities.'
+        ]
+    },
+    {
+        question : [
+                    'How can the private sector participate in the PRDP Scale up',
+        ],
+        answer : [
+                    'Through a strengthened productive '+
+                    'alliance, the PRDP Scale-up will enhance '+
+                    'the participation of the private sector '+
+                    'as either partners, co-managers, or co- '+
+                    'implementers of sub-project interventions. '+
+                    'These productive alliances could include '+
+                    'but are not limited to, the private sector as '+
+                    'co-managers of common service facilities '+
+                    'such as processing centers, warehouses, '+
+                    'cold storage, and others. The private sector '+
+                    'could also serve as a marketing conduit for '+
+                    'agri-fishery produce of Farmer Cooperatives '+
+                    'and Associations (FCA) or clusters of FCAs. '+
+                    'The private sector could be included in '+
+                    'the PRDP Scale-Up as a source of needed '+
+                    'technologies, parallel financing, capacity '+
+                    'building for FCAs/FCA clusters, and markets '+
+                    'for agri-fishery products.'
+        ]
     }
+
 ]
