@@ -1,5 +1,45 @@
 var questions = [
     {
+        question : [
+            'what is prdp',
+            'prdp'
+        ],
+        answer : [
+            {
+                type : 'p',
+                content : [
+                    'The Philippine Rural Development Project is a six-year (6) project '+
+                    'designed to establish the government platform for a modern, '+
+                    'climate-smart and market-oriented agri-fishery sector. '+
+                    'PRDP will partner with the LGUs and the private sector in '+
+                    'providing key infrastructure, facilities, technology, and information '+
+                    'that will raise incomes, productivity, and competitiveness in the countryside.'
+                ]
+            },
+            {
+                type : 'p',
+                content : [
+                    'Development Objectives'
+                ]
+            },
+            {
+                type : 'p',
+                content : [
+                    'Within the six-year (6) project intervention, it is expected to provide the following outcomes:'
+                ]
+            },{
+                type : 'list',
+                content : [
+                    'At least five percent (5%) increase in annual real farm incomes of PRDP in household beneficiaries',
+                    '30% increase in income for targeted beneficiaries of enterprise development',
+                    'Seven percent (7%) increase in value of annual marketed output',
+                    'Twenty percent (20%) increase in number of farmers and fishers with improved access to DA services'
+                ]
+            }
+        ],
+        type : 'html'
+    },
+    {
         question: [
                     'what is prdp scale up',
                     'prdp scale up',
@@ -430,6 +470,8 @@ var questions = [
                     'what are the prdp scale up subproject types',
                     'prdp scale up subproject types',
                     'prdp subproject types',
+                    'project types',
+                    'subproject types'
         ],
         answer : [
                 {
@@ -520,7 +562,7 @@ var questions = [
     {
         question : [
                 'What are the components of the PRDP Scale Up',
-                'what are prdp scale up components',
+                'what are the prdp scale up components',
                 'prdp scale up components',
                 'what are the prdp components',
                 'prdp components',
@@ -536,10 +578,29 @@ var questions = [
             {
                 type: 'list',
                 content : [
-                    'I-PLAN or Local and National Level Planning',
-                    'I-BUILD or Rural Infrastructure Market Linkage',
-                    'I-REAP or Rural Enterprise Development',
-                    'I-SUPPORT or Project Implementation Support'
+                    'I-PLAN or Local and National Level Planning - this component aims to enhance '+
+                    'the Agricultural and Fisheries Modernization Plan through science-based tools '+
+                    'and to harmonize regional and provincial Agriculture and Fisheries Modernization '+
+                    'Plan through the formulation of the Provincial Commodity Investment Plan using '+
+                    'value chain approach.',
+
+                    'I-BUILD or Rural Infrastructure Market Linkage - this component aims to improve '+
+                    'the links from production areas to markets to enhance the efficiency of transporting '+
+                    'agricultural products. It also aims for higher productivity as a result of increased '+
+                    'cropping intensity and yields, food security and improved health from readily available '+
+                    'potable water and lower post harvest losses resulting in higher volume of outputs and '+
+                    'more efficient support facilities.',
+
+
+                    'I-REAP or Rural Enterprise Development – this component aims to engage broad sections '+
+                    'of the sector in the production of marketable surplus through investments in strategic '+
+                    'segments of priority commodity value chains and strengthening collaboration between DA '+
+                    'and the Local Government Units. It shall strengthen and develop viable agri-fishery '+
+                    'based enterprises through efficient value chain of key regional agri-fishery product.',
+
+                    'I-SUPPORT or Project Implementation Support - this component aims to provide efficient '+
+                    'and effective project management and implementation, establish a standard on services '+
+                    'and technical assistance and effective mode of engagement with LGUs.'
                 ]
             }
         ],
