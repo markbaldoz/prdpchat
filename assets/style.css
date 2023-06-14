@@ -90,6 +90,7 @@ body{
     padding: 10px !important;
     background-color: #009140;
     color: white !important;
+    font-size: 14px !important;
 }
 
 
@@ -101,12 +102,19 @@ body{
     flex-direction: column !important;
     justify-content: end !important; */
     overflow: auto !important;
+    background-image: url('../assets/img/prdp-trans.png');
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    /* position: relative; */
+    /* background-size: cover !important; */
 }
+
+
 
 .chat-container .chat-wrapper .chat-msg-container .chat-content{
     width: 100% !important;
     height: 100% !important;
-   
+    /* z-index: 100 !important; */
     overflow: auto;
     /* align-items: end !important;
     display: flex;
