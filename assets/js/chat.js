@@ -32,7 +32,7 @@ var questions = [
     {
         question: [
                 'Where will the PRDP Scale Up be implemented?',
-                
+                'prdp scale up coverage'
             ],
         answer: ['The PRDP Scale-Up covers all 16 regions composed of 82 provinces in the country.']
     }, 
