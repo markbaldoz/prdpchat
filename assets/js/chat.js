@@ -410,6 +410,142 @@ var questions = [
                     'building for FCAs/FCA clusters, and markets '+
                     'for agri-fishery products.'
         ]
+    },
+    {
+        question : [
+                    'What are the sub-project proposals eligible for I-BUILD and I-REAP Components funding',
+                    'what are the prdp project types',
+                    'what are the prdp scale up project types',
+                    'prdp scale up project types',
+                    'prdp project types',
+                    'what are the prdp subproject types',
+                    'what are the prdp scale up subproject types',
+                    'prdp scale up subproject types',
+                    'prdp subproject types',
+        ],
+        answer : [
+                {
+                    type : 'p',
+                    content : ['Proposals anchored on the PCIPs and RAFIP '+
+                              'focused on the following infrastructure '+
+                              'subprojects are eligible for I-BUILD funding:']
+                },
+                {
+                    type : 'list',
+                    content : [
+                            'Farm-to-Market Road (FMR)',
+                            'Bridge',
+                            'Irrigation',
+                            'Potable Water System (PWS)',
+                            'Value Chain Rural Infrastructures (examples: slaughterhouse, dressing '+
+                            'plant, fish landing, tramlines, feeder ports)'
+                    ]
+                },
+                {
+                    type : 'p',
+                    content : [
+                            'Proposals anchored on the PCIPs and '+
+                            'RAFIP focused on the following enterprise '+
+                            'development subprojects are eligible for '+
+                            'I-REAP funding:'
+                    ]
+                },
+                {
+                    type : 'list',
+                    content : [
+                            'Input Supply/ Sourcing: seedling '+
+                            'nurseries and seed banks, tissue culture '+
+                            'laboratories/ centers, organic fertilizer '+
+                            'production/ composting centers, fish '+
+                            'hatcheries and nurseries, feed milling '+
+                            'plants, multiplier farms, breeding '+
+                            'centers for livestock and poultry',
+
+                            'Production: crop, livestock, dairy, and '+
+                            'fish production enterprises (communal '+
+                            'farming facilities i.e. greenhouse, '+
+                            'grow-out houses/pens, cattle feedlots, '+
+                            'fishponds, etc.), Common Service '+
+                            'Facilities for mechanized farming/ farm '+
+                            'machinery and equipment service '+
+                            'centers (land preparation, direct seeding, '+
+                            'transplanting, spraying, harvesting, '+
+                            'repair services, etc.) including the local '+
+                            'fabrication and manufacturing of agri- '+
+                            'fishery machinery and equipment',
+
+                            'Consolidation: buying, consolidation, '+
+                            'and packaging centers for high-value '+
+                            'crops with logistics service facilities '+
+                            '(hauling trucks, refrigerated vans, etc.)',
+
+                            'Postharvest: establishment and '+
+                            'operation of Common Service Facilities '+
+                            'for primary post-harvest processes '+
+                            '(drying facilities, fermentation houses, '+
+                            'HWT/VHT facilities, etc.), storage for '+
+                            'grain, high-value crops, meat and '+
+                            'fish products (cold storage facilities, '+
+                            'warehouses with drying and postharvest '+
+                            'equipment, silos, etc.)',
+
+                            'Processing: rice and corn processing '+
+                            'centers, GMP-compliant crop/ meat/ '+
+                            'dairy/fish processing facilities, Non-food '+
+                            'products processing facilities (abaca, '+
+                            'coco coir, rubber, etc.)',
+
+                            'Marketing: GMP-compliant food supply '+
+                            'hubs, i.e. trading posts/centers, and '+
+                            'food terminals equipped with cold or '+
+                            'dry storage facilities pre-processing/ '+
+                            'processing facilities, and logistics '+
+                            'facilities, establishment of auction '+
+                            'market facility complete with equipment '+
+                            'and the holding pens for large animals '+
+                            'including the auction market system'
+                    ]
+                }
+        ],
+        type : 'html'
+    },
+    {
+        question : [
+                'What are the components of the PRDP Scale Up',
+                'what are prdp scale up components',
+                'prdp scale up components',
+                'what are the prdp components',
+                'prdp components'
+        ],
+        answer : [
+            {
+                type : 'p',
+                content : [
+                            'The PRDP Scale-Up will be implemented through its four (4) components, namely:'
+                ]
+            },
+            {
+                type: 'list',
+                content : [
+                    'I-PLAN or Local and National Level Planning',
+                    'I-BUILD or Rural Infrastructure Market Linkage',
+                    'I-REAP or Rural Enterprise Development',
+                    'I-SUPPORT or Project Implementation Support'
+                ]
+            }
+        ],
+        type : 'html'
     }
 
 ]
+
+
+var translate_answer_element = function(type){
+    switch (type){
+        case 'list':
+            return '<ul></ul>';
+        
+            default: 
+            return '<'+ type +'></'+ type +'>';
+    }
+}

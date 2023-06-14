@@ -180,7 +180,7 @@
                     chat_msg.append(span_item);
 
 
-                    var latest_scroll_height = chat_content.prop('scrollHeight')
+                    var latest_scroll_height = chat_content.prop('scrollHeight');
                     if(current_scoll_height != latest_scroll_height){
                         scroll_message();
                         current_scoll_height = latest_scroll_height;
@@ -231,9 +231,11 @@
         }
 
         function scroll_message(){
-            chat_content.animate( {
-                scrollTop : chat_content.prop('scrollHeight')
-            });
+            // chat_content.animate( {
+            //     scrollTop : chat_content.prop('scrollHeight')
+            // });
+
+            chat_content.scrollTop(parseFloat(chat_content.prop('scrollHeight')));
         }
 
         function prepare_message(new_msg){
@@ -247,7 +249,15 @@
             // var question= questions.find(a => a.question.toLowerCase() === clean_question.toLowerCase());
             var question= find_answer(clean_question);
             if(question !== undefined){
-                send_message(question.answer, 'response');
+
+                var answer_type = question.type;
+                if(answer_type === undefined){
+                   send_message(question.answer, 'response'); 
+                }else{
+                    send_html_message(question.answer, 'response');
+                }
+
+                
             }else{
                 send_message(['Sorry. The data that you are asking is not yet available in the system. '+
                     ''], 'response');
@@ -259,6 +269,237 @@
             add_message(new_msg, type);
             txt_chat.val('');
         }
+
+        function send_html_message(new_msg, type = ''){
+
+            var chat =  '<div class="chat '+ type +'">' + 
+                        '   <p class="m-0 text-start msg">'+ '' +'</p>'+
+                        '</div>';
+
+            chat_content.append(chat);
+
+            var last_chat = chat_content.find('.chat').last();
+
+            var chat_msg = last_chat.find('.msg');
+
+            var answer_items = new_msg;
+
+            var answer_index = 0;
+            var current_answer = answer_items[answer_index];
+            var current_answer_type = current_answer.type;
+            var current_answer_element = translate_answer_element(current_answer_type);
+            var current_answer_content = current_answer.content;
+
+
+            
+            chat_msg.append(current_answer_element);
+            var last_msg_item = chat_msg.children().last();
+            
+            if(current_answer_type === 'list'){
+                last_msg_item.append('<li></li>');
+                last_msg_item = last_msg_item.children().last();
+            }
+
+            var content_index = 0;
+            var words = current_answer_content[content_index].split(' ');
+            var word_index = 0;
+            // var encoding_type = ''
+
+            var latest_scroll_height = chat_content.prop('scrollHeight')
+            
+            
+            function encode(){
+                setTimeout(function(){
+
+
+                    
+                    var word = words[word_index];
+                    
+
+                    last_msg_item.append(word + (word < words.length - 2 ? ' ' : ' '));
+
+                    current_scoll_height = chat_content.prop('scrollHeight'); 
+                    if(current_scoll_height != latest_scroll_height){
+                        scroll_message();
+                        current_scoll_height = latest_scroll_height;
+                    } 
+
+                    if(word_index + 1 < words.length){
+
+                        word_index++;
+                        encode();
+
+                    }else{
+
+                        
+
+                        if(content_index + 1 < current_answer_content.length){
+                            content_index++;
+
+                            console.log('encoding answer' + (answer_index + 1) + ' at content ' + (content_index + 1)); 
+
+                            words = current_answer_content[content_index].split(' ');
+
+                            if(current_answer_type === 'list'){
+                               
+                                
+                                // chat_msg.append(current_answer_element);
+                                // last_msg_item = chat_msg.children().last();
+
+                                last_msg_item.append('<li></li>');
+                                last_msg_item = last_msg_item.children().last();
+
+                                // if(current_scoll_height != latest_scroll_height){
+                                //     scroll_message();
+                                //     current_scoll_height = latest_scroll_height;
+                                // } 
+
+                            }else{
+                                chat_msg.append(current_answer_element);
+                                last_msg_item = chat_msg.children().last();
+
+                                // if(current_scoll_height != latest_scroll_height){
+                                //     scroll_message();
+                                //     current_scoll_height = latest_scroll_height;
+                                // } 
+                            }
+                            
+
+                            word_index = 0;
+                            encode();
+                        }else{
+
+                            if(answer_index + 1 < answer_items.length){
+                                answer_index++;
+                                current_answer = answer_items[answer_index];
+                                current_answer_type = current_answer.type;
+                                current_answer_element = translate_answer_element(current_answer_type);
+                                current_answer_content = current_answer.content;
+
+                                // chat_msg.append(current_answer_element);
+                                // last_msg_item = chat_msg.children().last();
+
+                                if(current_answer_type === 'list'){
+                               
+                                    chat_msg.append(current_answer_element);
+                                    last_msg_item = chat_msg.children().last();
+
+                                    last_msg_item.append('<li></li>');
+                                    last_msg_item = last_msg_item.children().last();
+
+                                }else{
+                                    chat_msg.append(current_answer_element);
+                                    last_msg_item = chat_msg.children().last();
+                                }
+
+                                content_index = 0;
+                                word_index = 0;
+                                words = current_answer_content[content_index].split(' ');
+                                encode();
+                            }else{
+                                toggle_chat_input();
+                            }
+                        }
+
+                    }
+                    
+
+                    // for(var c = 0; c < current_answer_content.length; c++){
+
+                        // setTimeout(function(){
+                            // if(current_answer_type === 'list'){
+                            //     last_msg_item.append('<li>' + current_answer_content[c] + '</li>');
+                            // }else{
+                            //     last_msg_item.append(current_answer_content[c]);  
+                            // }
+                        // }, 300);
+                        
+                          
+                    // }
+
+                    // return;
+                    
+                    // console.log('done encoding');
+                    
+                    // if(answer_index + 1 < answer_items.length){
+
+                    //     answer_index++;
+                    //     console.log('adding item ' + answer_index);
+                    //     current_answer = answer_items[answer_index];
+                    //     current_answer_type = current_answer.type;
+                    //     current_answer_element = translate_answer_element(current_answer_type);
+                    //     current_answer_content = current_answer.content;
+
+                    //     chat_msg.append(current_answer_element);
+                    //     last_msg_item = chat_msg.children().last();
+
+                    //     encode();
+                    // }else{
+                    //     toggle_chat_input();
+                    // }
+                }, 100);
+            }
+
+            encode();
+            
+
+            return;
+
+            for(var i = 0; i < answer_items.length; i++){
+                var item = answer_items[i];
+                var item_type = item.type;
+                var item_element = translate_answer_element(item_type);
+                chat_msg.append(item_element);
+
+                // get the last added message item
+                var chat_last_item =  chat_msg.children().last();
+
+                // get element items
+                var content_items = item.content;
+
+                // add new paragraph element item
+                if(item_type == 'p'){
+                    
+                    // chat_last_item.append(content_items[0]); 
+
+                    var words = content_items[0].split(' ');
+
+                    var index = 0;
+
+                    function encode_data(words){
+                        setTimeout(function(){
+
+                            if(index >= words.length){
+                                // clearInterval(interval);
+                                return;
+                            }
+
+                            var word = words[index];
+                            var span_item = document.createElement('span');
+                                span_item.innerHTML = word + (word < words.length - 2 ? ' ' : ' ');
+
+                            chat_last_item.append(span_item);   
+
+                            // increment content index
+                            index++;
+
+                            encode_data(words);
+                        }, 300);
+                    }
+                    encode_data(words);
+
+                }else if(item_type == 'list'){
+                    
+                    for(var content_index = 0; content_index < content_items.length; content_index++){
+                        chat_last_item.append('<li>'+ content_items[content_index] +'</li>');
+                    }
+                }
+            }
+
+            toggle_chat_input();
+        }
+
+
 
         function toggle_chat_input(mode = 'ready'){
             const ready_item = chat_input_container.find('.ready');
