@@ -601,6 +601,7 @@ var questions = [
                 'what are the prdp scale up components',
                 'prdp scale up components',
                 'what are the prdp components',
+                'what are the components',
                 'prdp components',
                 'components'
         ],
