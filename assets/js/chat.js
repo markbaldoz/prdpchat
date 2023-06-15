@@ -598,12 +598,18 @@ var questions = [
         topic : 'About PRDP major components',
         question : [
                 'What are the components of the PRDP Scale Up',
+                'What are the component of the PRDP Scale Up',
                 'what are the prdp scale up components',
+                'what are the prdp scale up component',
                 'prdp scale up components',
+                'prdp scale up component',
                 'what are the prdp components',
                 'what are the components',
+                'what are the component',
                 'prdp components',
-                'components'
+                'prdp component',
+                'components',
+                'component'
         ],
         answer : [
             {
