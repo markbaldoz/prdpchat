@@ -375,9 +375,12 @@ var questions = [
         question : [
                     'How much is the budget for the PRDP Scale Up',
                     'How much is the budget for PRDP Scale Up',
+                    'How much is the budget for Scale Up',
                     'prdp scale up budget',
                     'prdp scale up budget allocation',
-                    'budget'
+                    'budget',
+                    'budget for prdp scale up',
+                    'scale up budget'
         ],
         answer : [
                     'Financially, the project will be supported by a '+
