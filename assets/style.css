@@ -68,6 +68,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center !important;
+
 }
 
 .chat-container .chat-wrapper{
@@ -106,7 +107,7 @@ body{
     background-repeat: no-repeat !important;
     background-position: center !important;
     /* position: relative; */
-    /* background-size: cover !important; */
+    background-size: contain !important;
 }
 
 
@@ -172,6 +173,43 @@ body{
     outline: none !important;
     box-shadow: none !important;
     border: none !important;
+}
+
+
+
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px)
+    and (max-device-width: 1024px) {
+
+        .chat-container .chat-wrapper{
+            width: 80% !important;
+        }
+
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px)
+    and (orientation: portrait) {
+        .chat-container .chat-wrapper{
+            width: 90% !important;
+        }
+}
+ 
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px)
+    and (orientation: landscape) {
+        .chat-container .chat-wrapper{
+            width: 90% !important;
+        }
+}
+ 
+/* For Mobile Phones Portrait or Landscape View */
+@media screen
+    and (max-device-width: 640px) {
+        .chat-container .chat-wrapper{
+            width: 90% !important;
+        }
 }
 
 
