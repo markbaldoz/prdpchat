@@ -192,7 +192,14 @@ var questions = [
     },
     {
         topic : 'About PRDP FCA and FCA clusters',
-        question : ['Who are the FCAs and FCA clusters'],
+        question : [
+                'Who are the FCAs and FCA clusters', 
+                'who are the fcas', 
+                'who are the fca', 
+                'who are the fca clusters', 
+                'who are the fca cluster', 
+                'fca', 
+                'fca cluster'],
         answer : [
                 'FCA (Farmers Fisherfolk Cooperatives and Associations)',
 
@@ -672,9 +679,9 @@ var questions = [
 var translate_answer_element = function(type){
     switch (type){
         case 'list':
-            return '<ul></ul>';
+            return '<ul class="m"></ul>';
         
             default: 
-            return '<'+ type +'></'+ type +'>';
+            return '<'+ type +' class="m"></'+ type +'>';
     }
 }
