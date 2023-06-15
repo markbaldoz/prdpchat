@@ -133,6 +133,11 @@ var questions = [
         question : [
                 'Who are the beneficiaries of the PRDP Scale Up',
                 'PRDP scale up beneficiaries',
+                'scale up beneficiaries',
+                'beneficiaries of prdp scale up',
+                'beneficiaries of scale up',
+                'beneficiaries of the prdp scale up',
+                'beneficiaries of the scale up',
                 'beneficiaries'
             ],
         answer : ['Actors within the commodity value '+
@@ -186,7 +191,8 @@ var questions = [
         topic : 'About PRDP scale up implementation date',
         question: [
                 'when will the prdp scale up be implemented',
-                'prdp scale up implementation date'
+                'prdp scale up implementation date',
+                'scale up implementation date'
             ],
         answer: ['The PRDP Scale-Up is targeted to be implemented for six years from 2023 to 2029.']
     },
@@ -681,7 +687,10 @@ var translate_answer_element = function(type){
         case 'list':
             return '<ul class="m"></ul>';
         
-            default: 
+        case 'h':
+            return '<h6 class="fw-bold" style="font-size: 14px;"></h6>';
+
+        default: 
             return '<'+ type +' class="m"></'+ type +'>';
     }
 }
