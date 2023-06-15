@@ -65,7 +65,8 @@ var questions = [
                 'objective of prdp scale up',
                 'prdp scale up objective',
                 'scale up objective',
-                'objective'
+                'objective',
+                'aim of prdp'
             ],
         answer: ['The PRDP Scale-Up aims to contribute '+
                  'to developing the sector by improving '+
@@ -492,7 +493,18 @@ var questions = [
                     'prdp scale up subproject types',
                     'prdp subproject types',
                     'project types',
-                    'subproject types'
+                    'subproject types',
+                    'project',
+                    'what are the types of projects',
+                    'what are the types of PRDP projects',
+                    'what are the types of PRDP project',
+                    'types of project',
+                    'types of subproject',
+                    'what are the types of subprojects',
+                    'what are the types of PRDP subprojects',
+                    'what are the types of PRDP subproject',
+                    'types of scale up subproject',
+                    'types of scale up project',
         ],
         answer : [
                 {
